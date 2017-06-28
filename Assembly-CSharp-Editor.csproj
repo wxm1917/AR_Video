@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{9E976594-7EAD-0084-A039-4790A0E2886F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_3_5;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;VUFORIA_SAMPLE_ORIENTATION_SETTINGS;VUFORIA_ANDROID_SETTINGS;ENABLE_DUCK_TYPING</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Editor\Vuforia\SampleOrientationSetter.cs" />
+     <Compile Include="Assets\Editor\Vuforia\VideoPlaybackScripts\VideoPlaybackEditor.cs" />
+     <Compile Include="Assets\SamplesResources\CloudReco\Editor\CloudRecoEventHandlerEditor.cs" />
+     <Compile Include="Assets\SamplesResources\UserDefinedTargets\Editor\UDTEventHandlerEditor.cs" />
+     <Compile Include="Assets\SamplesResources\VuforiaSamplesUI\Editor\SamplesConfigUIEditor.cs" />
+     <Compile Include="Assets\Vuforia Video Playback\Editor\Scripts\VideoPlaybackImport.cs" />
+     <Compile Include="Assets\Vuforia\Editor\Scripts\ComponentFactoryStarter\ComponentFactoryStarter.cs" />
+     <Compile Include="Assets\Vuforia\Editor\Scripts\ExtensionImport.cs" />
+     <Compile Include="Assets\Vuforia\Editor\Scripts\PostProcessBuildPlayer.cs" />
+     <Compile Include="Assets\Vuforia\Editor\Scripts\Unzipper\SharpZipLibUnzipper.cs" />
+     <Compile Include="Assets\Vuforia\Editor\Scripts\VuforiaConfigurationEditor.cs" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
+     <None Include="Assets\Plugins\iOS\VuforiaMediaSource\src\VideoPlayerWrapper.mm.txt" />
+     <None Include="Assets\StreamingAssets\QCAR\sodacan.xml" />
+     <None Include="Assets\SamplesResources\CloudReco\Shaders\CR_Custom_TransparentUnlit.shader" />
+     <None Include="Assets\link.xml" />
+     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+     <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\StonesAndWood.xml" />
+     <None Include="Assets\readme_SDK.txt" />
+     <None Include="Assets\Plugins\Android\VuforiaMediaSource\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\VuforiaMediaSource\build.xml" />
+     <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\StonesAndChips.xml" />
+     <None Include="Assets\Plugins\Android\VuforiaMediaSource\README.txt" />
+     <None Include="Assets\license_3rdpartynotice.txt" />
+     <None Include="Assets\StreamingAssets\Vuforia\Vuforia.xml" />
+     <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />
+     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\FlakesBox.xml" />
+     <None Include="Assets\StreamingAssets\QCAR\Tarmac.xml" />
+     <None Include="Assets\SamplesResources\ObjectReco\Shaders\ObjectReco_Custom_Outline.shader" />
+     <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
+     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
+     <None Include="Assets\SamplesResources\VuMark\Shaders\VuMark_Custom_OverlayMesh.shader" />
+     <None Include="Assets\Plugins\iOS\VuforiaMediaSource\src\VideoPlayerHelper.mm.txt" />
+     <None Include="Assets\Editor\Vuforia\Vuforia\authoringinfo.xml" />
+     <None Include="Assets\Plugins\iOS\VuforiaMediaSource\README.txt" />
+     <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
+ <Reference Include="Assembly-UnityScript-Editor-firstpass">
+ <HintPath>D:/Develop Workspace/Unity/AR_Video/Library/ScriptAssemblies/Assembly-UnityScript-Editor-firstpass.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.EditorTestsRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Vuforia.UnityExtensions.Editor">
+ <HintPath>D:/Develop Workspace/Unity/AR_Video/Assets/Vuforia/Editor/Scripts/Vuforia.UnityExtensions.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Vuforia.UnityExtensions">
+ <HintPath>D:/Develop Workspace/Unity/AR_Video/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{3C079EF4-3BC3-1AF9-E07B-41E8F5411145}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
