@@ -1,0 +1,15 @@
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\UnityEditor.dll
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\UnityEngine.dll
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\UnityEngine.Networking.dll
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\Vuforia.UnityExtensions.dll
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\UnityEngine.xml
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\UnityEngine.Networking.xml
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\UnityEditor.xml
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_bin\Debug\Vuforia.UnityExtensions.xml
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_obj\Debug\AR_Video.CSharp.csprojResolveAssemblyReference.cache
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
+D:\Develop Workspace\Unity\AR_Video\Temp\UnityVS_obj\Debug\Assembly-CSharp.pdb

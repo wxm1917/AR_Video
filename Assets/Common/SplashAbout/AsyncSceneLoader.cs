@@ -16,7 +16,7 @@ public class AsyncSceneLoader : MonoBehaviour
 
     #region MONOBEHAVIOUR_METHODS
     void Start()
-    {	
+    {
         StartCoroutine(LoadNextSceneAfter(loadingDelay));
     }
     #endregion //MONOBEHAVIOUR_METHODS

@@ -76,6 +76,7 @@
     <Compile Include="Assets\Common\SplashAbout\LoadingScreen.cs" />
     <Compile Include="Assets\Common\TapHandler.cs" />
     <Compile Include="Assets\Common\TrackableSettings.cs" />
+    <Compile Include="Assets\MyScript\Launcher.cs" />
     <Compile Include="Assets\SamplesResources\CloudReco\Scripts\CloudRecoEventHandler.cs" />
     <Compile Include="Assets\SamplesResources\CloudReco\Scripts\CloudRecoTrackableEventHandler.cs" />
     <Compile Include="Assets\SamplesResources\CloudReco\Scripts\ContentManager.cs" />

@@ -25,7 +25,7 @@ public class LoadingScreen : MonoBehaviour
         Application.backgroundLoadingPriority = ThreadPriority.Low;
         mChangeLevel = true;
     }
-    
+
     void Update () 
     {
         mUISpinner.rectTransform.Rotate(Vector3.forward, 90.0f * Time.deltaTime);

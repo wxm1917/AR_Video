@@ -69,4 +69,25 @@ public class VideoPlaybackTapHandler : TapHandler
         return null;
     }
     #endregion //PRIVATE_METHODS
+
+    //#region Android端控制loading界面
+    //private AndroidJavaObject m_activity;
+
+    //void Awake()
+    //{
+    //    AndroidJavaClass jc = new AndroidJavaClass("com.qiyi.openapi.demo.activity.ARVideoActivity");
+    //    m_activity = jc.GetStatic<AndroidJavaObject>("mActivity");
+    //}
+
+    //void Start()
+    //{
+    //    // 第一帧执行就把启动画面隐藏
+    //    HideAndroidSplash();
+    //}
+
+    //public void HideAndroidSplash()
+    //{
+    //    m_activity.Call("hideSplash");
+    //}
+    //#endregion
 }

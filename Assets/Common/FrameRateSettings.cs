@@ -12,10 +12,31 @@ using Vuforia;
 public class FrameRateSettings : MonoBehaviour
 {
     #region MONOBEHAVIOUR_METHODS
-    void Start ()
+    void Start()
     {
         VuforiaARController.Instance.RegisterVuforiaStartedCallback(OnVuforiaStarted);
     }
+    //void Start()
+    //{
+    //    // 第一帧执行就把启动画面隐藏
+    //    HideAndroidSplash();
+
+    //    VuforiaARController.Instance.RegisterVuforiaStartedCallback(OnVuforiaStarted);
+    //}
+
+    //private AndroidJavaObject m_activity;
+
+    //void Awake()
+    //{
+    //    AndroidJavaClass jc = new AndroidJavaClass("com.qiyi.openapi.demo.activity.ARVideoActivity");
+    //    m_activity = jc.GetStatic<AndroidJavaObject>("mActivity");
+    //}
+
+    //public void HideAndroidSplash()
+    //{
+    //    m_activity.Call("hideSplash");
+    //}
+
     #endregion
 
 
