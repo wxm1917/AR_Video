@@ -159,7 +159,7 @@ public class VideoPlaybackBehaviour : MonoBehaviour
     void Start()
     {
         // 修改视频路径为Android SD卡
-        m_path = "/storage/emulated/0/qydemo/video/1.mp4";
+        m_path = "/storage/emulated/0/qiyuan/video/1.mp4";
 
         // Find the icon plane (child of this object),图标平面，显示play、loading、error等图标
         mIconPlane = transform.Find("Icon").gameObject;
