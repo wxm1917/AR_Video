@@ -16,6 +16,7 @@ using Vuforia;
 
 /// <summary>
 /// This is a utility class to actually play back videos on a texture or in full screen.
+/// 一个视频播放组件，可以使视频在一个图片播放或者全屏播放
 /// </summary>
 public class VideoPlayerHelper
 {
@@ -23,6 +24,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Various states a video can be in
+    /// 视频状态
     /// </summary>
     public enum MediaState
     {
@@ -38,6 +40,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// If the video can be played back on texture, in full screen on both.
+    /// 视频播放类型
     /// </summary>
     public enum MediaType
     {
@@ -52,6 +55,9 @@ public class VideoPlayerHelper
 
     #region PRIVATE_MEMBER_VARIABLES
 
+    /// <summary>
+    /// 视频文件名（包含完整路径）
+    /// </summary>
     private string mFilename = null;
     private string mFullScreenFilename = null;
 
@@ -143,6 +149,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Loads a local or remote movie file
+    /// 加载本地或者远程视频文件
     /// </summary>
     public bool Load(string filename, MediaType requestedType, bool playOnTextureImmediately, float seekPosition)
     {
@@ -163,6 +170,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Indicates whether the movie can be played on a texture
+    /// 判断视频是否可以再一个纹理上播放
     /// </summary>
     public bool IsPlayableOnTexture()
     {
@@ -172,6 +180,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Indicates whether the movie can be played fullscreen
+    /// 判断视频是否可以全屏播放
     /// </summary>
     public bool IsPlayableFullscreen()
     {
@@ -190,6 +199,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Return the current status of the movie such as Playing, Paused or Not Ready
+    /// 获取视频播放状态
     /// </summary>
     public MediaState GetStatus()
     {
@@ -199,6 +209,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Returns the width of the video frame
+    /// 获取视频帧宽度
     /// </summary>
     public int GetVideoWidth()
     {
@@ -208,6 +219,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Returns the height of the video frame
+    /// 获取视频帧高度
     /// </summary>
     public int GetVideoHeight()
     {
@@ -217,6 +229,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Returns the length of the current movie
+    /// 获取当前视频长度
     /// </summary>
     public float GetLength()
     {
@@ -226,6 +239,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Request a movie to be played either full screen or on texture and at a given position
+    /// 播放视频
     /// </summary>
     public bool Play(bool fullScreen, float seekPosition)
     {
@@ -249,6 +263,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Pauses the current movie being played
+    /// 暂停视频
     /// </summary>
     public bool Pause()
     {
@@ -258,6 +273,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Stops the current movie being played
+    /// 停止视频
     /// </summary>
     public bool Stop()
     {
@@ -267,6 +283,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Tells the VideoPlayerHelper to update the data from the video feed
+    /// 更新视频数据
     /// </summary>
     public MediaState UpdateVideoData()
     {
@@ -276,6 +293,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Moves the movie to the requested seek position
+    /// 将视频快进到指定播放位置
     /// </summary>
     public bool SeekTo(float position)
     {
@@ -285,6 +303,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Gets the current seek position
+    /// 获取视频当前播放位置
     /// </summary>
     public float GetCurrentPosition()
     {
@@ -294,6 +313,7 @@ public class VideoPlayerHelper
 
     /// <summary>
     /// Sets the volume of the movie to the desired value
+    /// 设置视频音量
     /// </summary>
     public bool SetVolume(float value)
     {
@@ -304,6 +324,7 @@ public class VideoPlayerHelper
     /// <summary>
     /// Gets the buffering percentage in case the movie is loaded from network
     /// Note this is not supported on iOS
+    /// 获取远程视频缓冲的百分比
     /// </summary>
     public int GetCurrentBufferingPercentage()
     {

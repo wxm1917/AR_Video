@@ -14,6 +14,8 @@ using System.Collections;
 /// <summary>
 /// The VideoPlaybackBehaviour manages the appearance of a video that can be superimposed on a target.
 /// Playback controls are shown on top of it to control the video. 
+/// 1）管理叠加在target上的视频的显示，包括设置视频路径、尺寸，设置视频播放/暂停等控制组件的icon
+/// 2）通过在视频界面上的控制组件操作视频
 /// </summary>
 public class VideoPlaybackBehaviour : MonoBehaviour
 {
@@ -21,26 +23,31 @@ public class VideoPlaybackBehaviour : MonoBehaviour
 
     /// <summary>
     /// URL of the video, either a path to a local file or a remote address
+    /// 视频路径
     /// </summary>
     public string m_path = null;
 
     /// <summary>
     /// Texture for the play icon
+    /// 播放图标
     /// </summary>
     public Texture m_playTexture = null;
 
     /// <summary>
     /// Texture for the busy icon
+    /// 加载图标
     /// </summary>
     public Texture m_busyTexture = null;
 
     /// <summary>
     /// Texture for the error icon
+    /// 出错图标
     /// </summary>
     public Texture m_errorTexture = null;
 
     /// <summary>
     /// Define whether video should automatically start
+    /// 视频是否自动播放的标志
     /// </summary>
     public bool m_autoPlay = false;
 
@@ -59,21 +66,39 @@ public class VideoPlaybackBehaviour : MonoBehaviour
 
     private Texture2D mVideoTexture = null;
 
+    /// <summary>
+    /// 播放前显示的一帧
+    /// </summary>
     [SerializeField]
     [HideInInspector]
     private Texture mKeyframeTexture = null;
 
+    /// <summary>
+    /// 播放类型
+    /// </summary>
     private VideoPlayerHelper.MediaType mMediaType =
             VideoPlayerHelper.MediaType.ON_TEXTURE_FULLSCREEN;
 
+    /// <summary>
+    /// 播放器状态
+    /// </summary>
     private VideoPlayerHelper.MediaState mCurrentState =
             VideoPlayerHelper.MediaState.NOT_READY;
 
+    /// <summary>
+    /// 上次播放到的位置
+    /// </summary>
     private float mSeekPosition = 0.0f;
 
     private bool isPlayableOnTexture;
 
+    /// <summary>
+    /// 图标平面，显示play、loading、error的界面
+    /// </summary>
     private GameObject mIconPlane = null;
+    /// <summary>
+    /// 图标平面是否可见的标志
+    /// </summary>
     private bool mIconPlaneActive = false;
 
     #endregion // PRIVATE_MEMBER_VARIABLES
@@ -133,10 +158,10 @@ public class VideoPlaybackBehaviour : MonoBehaviour
 
     void Start()
     {
-        // test: 修改视频路径为Android SD卡
+        // 修改视频路径为Android SD卡
         m_path = "/storage/emulated/0/qydemo/video/1.mp4";
 
-        // Find the icon plane (child of this object)
+        // Find the icon plane (child of this object),图标平面，显示play、loading、error等图标
         mIconPlane = transform.Find("Icon").gameObject;
 
         // A filename or url must be set in the inspector
@@ -157,7 +182,7 @@ public class VideoPlaybackBehaviour : MonoBehaviour
         mVideoPlayer = new VideoPlayerHelper();
         mVideoPlayer.SetFilename(m_path);
 
-        // Flip the plane as the video texture is mirrored on the horizontal
+        // Flip the plane as the video texture is mirrored on the horizontal(修改Video的尺寸)
         transform.localScale = new Vector3(-1 * Mathf.Abs(transform.localScale.x),
                 transform.localScale.y, transform.localScale.z);
 
@@ -223,6 +248,10 @@ public class VideoPlaybackBehaviour : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 初始化播放器
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator InitVideoPlayer()
     {
         // Initialize the video player
@@ -248,6 +277,10 @@ public class VideoPlaybackBehaviour : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 加载视频
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator LoadVideo()
     {
         // Lock file loading
@@ -281,6 +314,10 @@ public class VideoPlaybackBehaviour : MonoBehaviour
         }
     } 
 
+    /// <summary>
+    /// 准备视频
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator PrepareVideo()
     {
         // Get the video player status
@@ -331,7 +368,7 @@ public class VideoPlaybackBehaviour : MonoBehaviour
                     transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f * aspect);
                 }
 
-                // Seek ahead if necessary
+                // Seek ahead if necessary(快进)
                 if (mSeekPosition > 0)
                 {
                     mVideoPlayer.SeekTo(mSeekPosition);
@@ -418,7 +455,10 @@ public class VideoPlaybackBehaviour : MonoBehaviour
 
     #region PRIVATE_METHODS
 
-    // Initialize the video texture
+    /// <summary>
+    /// 初始化视频纹理
+    /// </summary>
+    /// <param name="isOpenGLRendering"></param>
     private void InitVideoTexture(bool isOpenGLRendering)
     {
         // Create texture whose content will be updated in native plugin code.
@@ -438,7 +478,10 @@ public class VideoPlaybackBehaviour : MonoBehaviour
         mVideoTexture.wrapMode = TextureWrapMode.Clamp;
     }
 
-    // Handle video playback state changes
+    /// <summary>
+    /// 处理播放器状态的改变
+    /// </summary>
+    /// <param name="newState"></param>
     private void HandleStateChange(VideoPlayerHelper.MediaState newState)
     {
         // If the movie is playing or paused render the video texture
@@ -499,6 +542,9 @@ public class VideoPlaybackBehaviour : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 设置icon的比例大小
+    /// </summary>
     private void ScaleIcon()
     {
         // Icon should fill 50% of the narrowest side of the video
@@ -521,7 +567,9 @@ public class VideoPlaybackBehaviour : MonoBehaviour
         mIconPlane.transform.localScale = new Vector3(-iconWidth, 1.0f, iconHeight);
     }
 
-
+    /// <summary>
+    /// 设置图标平面可见
+    /// </summary>
     private void CheckIconPlaneVisibility()
     {
         // If the video object renderer is currently enabled, we might need to toggle the icon plane visibility
